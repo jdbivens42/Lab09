@@ -121,6 +121,10 @@ void Sort<T>::choosePivot(T** items, int first, int last)
    //find a better item to be the partition than simply using the item in the first index
    //you will need to swap
 
+   int mid = first + (last - first) / 2;
+   T* temp = items[mid];
+   items[mid] = items[first];
+   items[first] = temp;   
 
 
 
