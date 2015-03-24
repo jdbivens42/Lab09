@@ -46,9 +46,9 @@ T** Sort<T>::quickSort(T** items, int numItems, int (*compare) (T* one, T* two))
 	   new_items[i] = items[i];
    }
    
-   cout << "Recursion Begin\n";
+   //cout << "Recursion Begin\n";
    _quickSort(new_items, 0, numItems - 1, compare);
-   cout << "\n\nSorted\n";
+   //cout << "\n\nSorted\n";
    return new_items;
 }
 
@@ -61,14 +61,14 @@ void Sort<T>::_quickSort(T** items, int first, int last, int (*compare) (T* one,
    //make the necessary partition and recursive calls for quick sort
    if (first < last)
    {
-		cout << "Level start\n";
+		//cout << "Level start\n";
 		pivotIndex = partition(items, first, last, compare);
-		cout << "Partition made\n";
+		//cout << "Partition made\n";
 		
-		cout << "Going recursive on subarray " << first << " to " << pivotIndex - 1 << "\n";
+		//cout << "Going recursive on subarray " << first << " to " << pivotIndex - 1 << "\n";
 		_quickSort(items, first, pivotIndex - 1, compare);
 		
-		cout << "Going recursive on subarray " << pivotIndex + 1 << " to " << last << "\n";
+		//cout << "Going recursive on subarray " << pivotIndex + 1 << " to " << last << "\n";
 		_quickSort(items, pivotIndex + 1, last, compare);
    }  
 }  
@@ -91,26 +91,26 @@ int Sort<T>::partition(T** items, int first, int last, int (*compare) (T* one, T
 
    while (curr <= last)
    {
-	   cout << "Last is: " << last << "\n";
+	   //cout << "Last is: " << last << "\n";
 	   int result = (*compare) (items[curr], items[pivot]);
-	   cout << "Compared " << pivot << " to " << curr << "\n";
+	   //cout << "Compared " << pivot << " to " << curr << "\n";
 	   if (result < 0)
 	   {
-          cout << "Swapping...";		  
+          //cout << "Swapping...";		  
 		  lastS1++;
 		   temp = items[curr];
 		   items[curr] = items[lastS1];
 		   items[lastS1] = temp;
-		   cout << "swap made\n";
+		   //cout << "swap made\n";
 	   }
 	   curr++;
    }
    
-   cout << "Finishing... ";
+   //cout << "Finishing... ";
    temp = items[pivot];
    items[pivot] = items[lastS1];
    items[lastS1] = temp;
-   cout << "Finished\n";
+   //cout << "Finished\n";
    return lastS1;
 }
 

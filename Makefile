@@ -20,7 +20,7 @@ all: Lab09
 Lab09: 		$(FILES)
 		$(LINK) $(EXECUTABLE) $(FILES) $(LIBS)	
 
-SortPlot.o: 			SortPlot.h SortPlot.cpp Points.cpp 
+SortPlot.o: 			Sort.h SortPlot.h SortPlot.cpp Points.cpp 
 		$(COMPILE) SortPlot.cpp Points.cpp
 		
 Points.o:				Points.cpp Points.h
