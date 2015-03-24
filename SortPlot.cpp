@@ -1,3 +1,5 @@
+//Github Repository: https://github.com/jdbivens42/lab09
+//Joe Bivens and Zachary Howard
 #include "SortPlot.h"
 #include "Sort.h"
 #include "Random.h"
