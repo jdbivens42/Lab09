@@ -2,7 +2,7 @@ AutomatedMakefile = am
 CC = g++
 
 FILES = SortPlot.o Points.o Point.o Plot.o
-EXECUTABLE = sort.exe
+EXECUTABLE = Lab09.exe
 
 PROJECT_PATH = $(PROJECT_DIR)
 GTK_PATH = /$(DRIVE_LETTER)/MinGW/GTK

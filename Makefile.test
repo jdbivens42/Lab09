@@ -2,7 +2,7 @@ AutomatedMakefile = am
 CC = g++
 
 FILES = QuickTest.o
-EXECUTABLE = test.exe
+EXECUTABLE = QuickTest.exe
 
 PROJECT_PATH = $(PROJECT_DIR)
 GTK_PATH = /$(DRIVE_LETTER)/MinGW/GTK
